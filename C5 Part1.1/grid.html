@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        .grid-layout{
+            display: grid;
+            gap: 10px;
+            grid-template-rows:5vh 4vh 10vh 60vh 5vh;
+            grid-template-areas: 
+            'l l l l'
+            'n n n n'
+            'hb hb hb hb'
+            'sb ba ba ba'
+            'f f f f'
+            ;
+        }
+        .logo span{
+           position: relative;
+           right: 46%;
+        }
+
+        .navigation {
+            justify-content: center;
+           
+        } 
+        
+
+        .logo{
+            grid-area: l;
+        }
+
+        .navigation{
+            grid-area: n;
+        }
+
+        .headerbanner{
+            grid-area: hb;
+        }
+
+        .sidebar{
+            grid-area: sb;
+        }
+
+        .bodyarea{
+            grid-area: ba;
+        }
+        .footer{
+            grid-area: f;
+        }
+
+        .grid-layout div{
+            display: grid;
+            border: 1px solid #c0c0c0;
+            background-color: #c0c0c0;
+            font-size: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-layout">
+        <div class="logo"><span>Logo</span></div>
+        <div class="navigation">Navigation</div>
+        <div class="headerbanner">Header/Banner</div>
+        <div class="sidebar">Side Bar</div>
+        <div class="bodyarea">Body Area</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
